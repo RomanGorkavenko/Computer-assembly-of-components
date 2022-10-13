@@ -21,6 +21,6 @@ public class ComputerCase extends Parts {
 
     @Override
     public String toString() {
-        return "Корпус " + getBrand() + " " + getModel() + ", Типоразмер: " + standardSize;
+        return getBrand() + " " + getModel() + ", Типоразмер: " + standardSize;
     }
 }

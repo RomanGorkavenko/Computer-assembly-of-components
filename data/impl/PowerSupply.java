@@ -20,6 +20,6 @@ public class PowerSupply extends Parts {
 
     @Override
     public String toString() {
-        return "Блок питания " + getBrand()+ " " + outputPower + "W " + getModel();
+        return getBrand()+ " " + outputPower + "W " + getModel();
     }
 }

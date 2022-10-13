@@ -21,6 +21,6 @@ public class GraphicsCard extends Parts {
 
     @Override
     public String toString() {
-        return "Видеокарта " + getBrand() + " " + getModel() + " " + series;
+        return  getBrand() + " " + getModel() + " " + series;
     }
 }

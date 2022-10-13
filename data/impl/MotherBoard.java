@@ -20,7 +20,7 @@ public class MotherBoard extends Parts {
 
     @Override
     public String toString() {
-        return "Материнская плата " + getBrand() + " " + getModel() +
+        return getBrand() + " " + getModel() +
                 " Количество слотов памяти: " + numberOfMemorySlots;
     }
 }

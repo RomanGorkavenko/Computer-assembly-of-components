@@ -28,43 +28,52 @@ public class ControllerMenu {
 
     public void menu(){
         System.out.println("Соберите себе компьютер!\nПросто выберите детали из списка");
-        String partsNumber = "Введите номер детали";
+        String partsNumber = "Введите номер детали --> ";
 
+        System.out.println("Материнские платы:");
         motherBoardService.print(motherBoardService.toCreateList());
         int motherBoardNumber = inputNumber(partsNumber);
         String motherBoard = motherBoardService.searchParts(motherBoardNumber, motherBoardService.toCreateList());
 
+        System.out.println("Процессоры:");
         cpuService.print(cpuService.toCreateList());
         int cpuNumber = inputNumber(partsNumber);
         String cpu = cpuService.searchParts(cpuNumber, cpuService.toCreateList());
 
+        System.out.println("Оперативная память:");
         ramService.print(ramService.toCreateList());
         int ramNumber = inputNumber(partsNumber);
         String ram = ramService.searchParts(ramNumber, ramService.toCreateList());
 
+        System.out.println("SSD накопители:");
         ssdService.print(ssdService.toCreateList());
         int ssdNumber = inputNumber(partsNumber);
         String ssd = ssdService.searchParts(ssdNumber, ssdService.toCreateList());
 
+        System.out.println("Видеокарты:");
         graphicsCardService.print(graphicsCardService.toCreateList());
         int graphicsCardNumber = inputNumber(partsNumber);
         String graphicsCard = graphicsCardService.searchParts(graphicsCardNumber, graphicsCardService.toCreateList());
 
+        System.out.println("Блоки питания:");
         powerSupplyService.print(powerSupplyService.toCreateList());
         int powerSupplyNumber = inputNumber(partsNumber);
         String powerSupply = powerSupplyService.searchParts(powerSupplyNumber, powerSupplyService.toCreateList());
 
+        System.out.println("Корпуса:");
         computerCaseService.print(computerCaseService.toCreateList());
         int computerCaseNumber = inputNumber(partsNumber);
         String computerCase = computerCaseService.searchParts(computerCaseNumber, computerCaseService.toCreateList());
 
+        System.out.println("\n=======================================================\n");
+        System.out.println("По вашему выбору создан:");
         System.out.println(controllerBuilder.getComputerAccordingToTheDesiredCriteria(motherBoard, cpu, ram, ssd,
                             graphicsCard, powerSupply, computerCase));
     }
 
     public int inputNumber(String str) {
         Scanner input = new Scanner(System.in);
-        System.out.println(str);
+        System.out.print(str);
         int num;
         if (input.hasNextInt()) {
             num = input.nextInt();

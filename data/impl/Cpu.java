@@ -21,6 +21,6 @@ public class Cpu extends Parts {
 
     @Override
     public String toString() {
-        return "Процессор " + getBrand() + " " + getModel() + " " + series;
+        return  getBrand() + " " + getModel() + " " + series;
     }
 }

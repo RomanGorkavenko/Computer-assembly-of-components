@@ -2,13 +2,13 @@ package HWSem5OOP.data;
 
 public class Computer {
 
-    private String motherBoard;
-    private String cpu;
-    private String raw;
-    private String ssd;
-    private String graphicsCard;
-    private String powerSupply;
-    private String computerCase;
+    private final String motherBoard;
+    private final String cpu;
+    private final String raw;
+    private final String ssd;
+    private final String graphicsCard;
+    private final String powerSupply;
+    private final String computerCase;
 
     public Computer(String motherBoard, String cpu, String raw, String ssd, String graphicsCard,
                     String powerSupply, String computerCase) {
@@ -24,7 +24,13 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Компьютер:\n" + motherBoard + "\n" + cpu + "\n" + raw + "\n" + ssd + "\n" + graphicsCard + "\n" +
-                powerSupply + "\n" + computerCase;
+        return "Компьютер:\n" +
+                "Материнская плата " + motherBoard + "\n" +
+                "Процессор " + cpu + "\n" +
+                "Оперативная память " + raw + "\n" +
+                "SSD накопитель " + ssd + "\n" +
+                "Видеокарта " + graphicsCard + "\n" +
+                "Блок питания " + powerSupply + "\n" +
+                "Корпус " + computerCase;
     }
 }

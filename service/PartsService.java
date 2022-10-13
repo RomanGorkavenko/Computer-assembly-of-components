@@ -1,7 +1,6 @@
 package HWSem5OOP.service;
 
 import HWSem5OOP.data.Parts;
-import HWSem5OOP.data.impl.Cpu;
 
 import java.util.List;
 
@@ -31,7 +30,7 @@ public class PartsService<T extends Parts> {
                 return list.get(i).toString();
             }
         }
-        return null;
+        return "[ пусто ]";
     }
 
     public void print(List<T> list){

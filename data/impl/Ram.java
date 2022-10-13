@@ -20,6 +20,6 @@ public class Ram extends Parts {
 
     @Override
     public String toString() {
-        return "Оперативная память " + getBrand() + " " + getModel() + " " + theVolumeOfOneModule + " Gb.";
+        return  getBrand() + " " + getModel() + " " + theVolumeOfOneModule + " Gb.";
     }
 }

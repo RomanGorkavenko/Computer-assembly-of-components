@@ -20,6 +20,6 @@ public class Ssd extends Parts {
 
     @Override
     public String toString() {
-        return "SSD накопитель " + getBrand() + " " + getModel() + " " + ssdCapacity + " Gb.";
+        return getBrand() + " " + getModel() + " " + ssdCapacity + " Gb.";
     }
 }
